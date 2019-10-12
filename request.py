@@ -3,7 +3,12 @@ from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
 from enum import Enum
-from datetime import date
+from datetime import date, datetime
+from apscheduler.schedulers.blocking import BlockingScheduler
+
+sched = BlockingScheduler()
+TEST_URL = 'http://menu.dining.ucla.edu/Menus'
+
 
 meal_period_key = {0:'Breakfast', 1:'Lunch', 2:'Dinner'}
 dining_hall_key = {0:'Covel', 1:'De Neve', 2:'Feast', 3:'Bruin Plate'}
@@ -87,19 +92,30 @@ def add_locations(listOfItems, time):
 				i = i+1
 			index = index+1
 
-TEST_URL = 'http://menu.dining.ucla.edu/Menus'
-current_day = date.today()
-output = simple_get(TEST_URL)
-all_items = process_data(output)
-time = 0
-for meal_items in all_items:
-	add_locations(all_items[time], time)
-	time = time + 1
-file1 = open(r"menu.txt", "w+")
-file1.writelines('UCLA Dining menu for ' + str(current_day) + '\n\n')
-file1.writelines(all_items[0])
-file1.write('\n\n')
-file1.writelines(all_items[1])
-file1.write('\n\n')
-file1.writelines(all_items[2])
-file1.close()
+def export_data():
+	current_day = date.today()
+	current_time = datetime.now().time()
+	output = simple_get(TEST_URL) #get the webpage
+	all_items = process_data(output)
+	current_time=str(current_time.hour)+'_'+str(current_time.minute)+'_'+str(current_time.second)
+	time=0
+	for meal_items in all_items:
+		add_locations(all_items[time], time)
+		time = time + 1
+	filename = "menu"+current_time+".txt"
+	file1 = open(filename, "w+")
+	file1.writelines('UCLA Dining menu for ' + str(current_day) + '\n\n')
+	file1.writelines('Generated on ' + str(current_time.replace('_', ':'))+ ' PDT\n')
+	file1.writelines(all_items[0])
+	file1.write('\n\n')
+	file1.writelines(all_items[1])
+	file1.write('\n\n')
+	file1.writelines(all_items[2])
+	file1.close()
+
+@sched.scheduled_job('interval', seconds=1800)
+def timed_job():
+    print('Executing job on ' + str(datetime.now().time()))
+    export_data()
+
+sched.start()
