@@ -9,7 +9,6 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 sched = BlockingScheduler()
 TEST_URL = 'http://menu.dining.ucla.edu/Menus'
 
-
 meal_period_key = {0:'Breakfast', 1:'Lunch', 2:'Dinner'}
 dining_hall_key = {0:'Covel', 1:'De Neve', 2:'Feast', 3:'Bruin Plate'}
 
@@ -55,21 +54,8 @@ def process_data(html_file):
 		elif any('Detailed Dinner' in s for s in link):
 			index = 2
 			print('dinner start')
-		#if i<42:
-		#	continue
-		# print(str(i), end="")
-		# print(link.contents)
 		food_items[index].append(link.contents[0]+'\n')
-
-	# for meal_items in food_items:
-		# print(str('START'))
-		# for items in meal_items:
-			# print(str(items))
-	
 	return food_items
-	# if len(breakfast_items) == 0 and len(lunch_items) != 0:
-	#	brunch_flag = True
-	#	print('No breakfast today, only brunch')
 
 def add_locations(listOfItems, time):
 	i=0
@@ -79,16 +65,16 @@ def add_locations(listOfItems, time):
 		for items in tempList:
 			if "Detailed Menu" in items and i==0:
 				print('insert de neve')
-				listOfItems.insert(index, '\n'+str(dining_hall_key[1])+'\n')
+				listOfItems.insert(index, '\n-----'+str(dining_hall_key[1])+'-----\n')
 				i = i+1
 			elif "Detailed Menu" in items and i==1:
-				listOfItems.insert(index, '\n'+str(dining_hall_key[3])+'\n')
+				listOfItems.insert(index, '\n-----'+str(dining_hall_key[3])+'-----\n')
 				i = i+1
 			index = index+1
 	elif time == 1 or time == 2:
 		for items in tempList:
 			if "Detailed Menu" in items:
-				listOfItems.insert(index, '\n'+str(dining_hall_key[i])+'\n')
+				listOfItems.insert(index, '\n-----'+str(dining_hall_key[i])+'-----\n')
 				i = i+1
 			index = index+1
 
@@ -104,8 +90,8 @@ def export_data():
 		time = time + 1
 	filename = "menu"+current_time+".txt"
 	file1 = open(filename, "w+")
-	file1.writelines('UCLA Dining menu for ' + str(current_day) + '\n\n')
-	file1.writelines('Generated on ' + str(current_time.replace('_', ':'))+ ' PDT\n')
+	file1.writelines('UCLA Dining menu for ' + str(current_day) + '\n')
+	file1.writelines('Generated on ' + str(current_time.replace('_', ':'))+ ' PDT\n\n')
 	file1.writelines(all_items[0])
 	file1.write('\n\n')
 	file1.writelines(all_items[1])
