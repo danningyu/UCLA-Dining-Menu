@@ -49,13 +49,10 @@ def process_data(html_file):
 		i=i+1
 		if any('Detailed Breakfast' in s for s in link):
 			index = 0
-			print('breakfast start')
 		elif any('Detailed Lunch' in s for s in link):
 			index = 1
-			print('lunch start')
 		elif any('Detailed Dinner' in s for s in link):
 			index = 2
-			print('dinner start')
 		food_items[index].append(link.contents[0]+'\n')
 	return food_items
 
