@@ -13,9 +13,11 @@ meal_period_key = {0:'Breakfast', 1:'Lunch', 2:'Dinner'}
 dining_hall_key = {0:'Covel', 1:'De Neve', 2:'Feast', 3:'Bruin Plate'}
 
 def simple_get(url):
+	print('Downloading content from menu webpage...')
 	try:
 		with closing(get(url, stream=True)) as resp:
 			if is_good_response(resp):
+				print('Successfully downloaded page.')
 				return resp.content
 			else:
 				return None
@@ -64,7 +66,6 @@ def add_locations(listOfItems, time):
 	if time == 0:	#breakfast	
 		for items in tempList:
 			if "Detailed Menu" in items and i==0:
-				print('insert de neve')
 				listOfItems.insert(index, '\n-----'+str(dining_hall_key[1])+'-----\n')
 				i = i+1
 			elif "Detailed Menu" in items and i==1:
@@ -79,9 +80,11 @@ def add_locations(listOfItems, time):
 			index = index+1
 
 def export_data():
+	print('Running program...')
 	current_day = date.today()
 	current_time = datetime.now().time()
 	output = simple_get(TEST_URL) #get the webpage
+	print('Exporting data...')
 	all_items = process_data(output)
 	current_time=str(current_time.hour)+'_'+str(current_time.minute)+'_'+str(current_time.second)
 	time=0
@@ -98,8 +101,12 @@ def export_data():
 	file1.write('\n\n')
 	file1.writelines(all_items[2])
 	file1.close()
+	print('Done running program...')
 
-@sched.scheduled_job('interval', seconds=1800)
+#run once upon startup
+export_data()
+
+@sched.scheduled_job('interval', seconds=10)
 def timed_job():
     print('Executing job on ' + str(datetime.now().time()))
     export_data()
