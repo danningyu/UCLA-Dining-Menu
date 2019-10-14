@@ -1,0 +1,56 @@
+﻿$(document).ready(function () {
+
+    $(document).on('click', '#FilterReset', function () {
+
+        $('#FilteringModeIncludeOnly').prop('checked', true);
+
+        $("[id^='webcode-']").prop('checked', false);
+
+    });
+
+    $(document).on('click', '#FilterClear, #FilterClearInline', function () {
+
+        $('#mf-content-wrap').addClass('mf-blur');
+        $('#mf-overlay').show();
+
+        $.post(
+            '/MenuFilter/Clear',
+            '',
+            function (data) {
+                ExitMenuFilter();
+            }
+        );
+
+        return false;
+    });
+
+    $(document).on('click', '#FilterApply', function () {
+
+        $('#mf-content-wrap').addClass('mf-blur');
+        $('#mf-overlay').show();
+
+        $.post(
+            '/MenuFilter/Apply',
+            $('#FilterForm').serialize(),
+            function (data) {
+                ExitMenuFilter();
+            }
+        );
+
+    });
+
+});
+
+function ExitMenuFilter() {
+
+    // Go back or refresh the page, depending on whether the form is in a lightbox or not
+    if (window.location.href.indexOf("MenuFilter") == -1) {
+        window.location.reload();
+    } else {
+        if (document.referrer == '' || document.referrer == window.location.href) {
+            window.location.href = '/Menus';
+        } else {
+            window.location.href = document.referrer;
+        }
+    }
+}

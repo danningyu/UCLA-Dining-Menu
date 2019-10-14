@@ -1,0 +1,145 @@
+﻿/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	EXTRA NAV ELEMENTS
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#nav-extras
+{
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    top: -20px;
+}
+
+div.menu-filter-container
+{
+    padding: 15px
+}
+
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	HEADER STYLES
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+h3.col-header
+{
+}
+
+div.meal-detail-link
+{
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    height: 20px;
+    margin-bottom: 0;
+    margin-top: -20px;
+}
+
+div.meal-back-link
+{
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    height: 20px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+
+div.location-detail-links
+{
+    border-bottom:1px solid #E4E4E4; 
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+    padding-bottom:5px;
+}
+
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	CONTAINERS
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+div.menu-block
+{
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+div.half-col
+{
+    width: 428px;
+}
+
+div.third-col
+{
+    width: 278px;
+}
+
+div.whole-col
+{
+    width: 898px;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	MENU ITEM LISTS
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+ul.sect-list
+{
+    list-style-type: none;
+    text-align: left;
+}
+
+li.sect-item
+{
+    font-weight: bold;
+    text-align: left;
+}
+
+ul.item-list
+{
+    list-style-type: none;
+    margin-left: 15px;
+    text-align: left;
+}
+
+li.menu-item
+{
+    font-weight: normal;
+    margin-left: 15px;
+    text-align: left;
+    text-indent: -15px;
+    
+}
+
+div.item-description
+{
+	margin-left: -15px;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	MOBILE STYLES
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@media only screen and (max-width: 959px)
+{
+    div.half-col, div.third-col, div.whole-col
+    {
+        display: block;
+        width: auto;
+    }
+
+    #nav-extras
+    {
+        position: static;
+        width: 100%;
+    }
+
+    div.meal-back-link
+    {
+        margin-top: 5px;
+    }
+}

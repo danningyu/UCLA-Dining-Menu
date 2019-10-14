@@ -1,0 +1,524 @@
+﻿
+span.activity-level-wrapper
+{
+    -moz-border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #1e4b87;
+    border-radius: 2px;
+    display: inline-block;
+    height: 8px;
+    line-height: 8px;
+    width: 100px;
+}
+
+span.activity-level
+{
+    display: inline-block;
+    height: 8px;
+    vertical-align: top;
+}
+
+span.activity-level-000
+{
+	width: 0px;
+}
+span.activity-level-001
+{
+	width: 1px;
+	background-color:#00FF00;
+}
+span.activity-level-002
+{
+	width: 2px;
+	background-color:#05FF00;
+}
+span.activity-level-003
+{
+	width: 3px;
+	background-color:#0AFF00;
+}
+span.activity-level-004
+{
+	width: 4px;
+	background-color:#10FF00;
+}
+span.activity-level-005
+{
+	width: 5px;
+	background-color:#15FF00;
+}
+span.activity-level-006
+{
+	width: 6px;
+	background-color:#1AFF00;
+}
+span.activity-level-007
+{
+	width: 7px;
+	background-color:#1FFF00;
+}
+span.activity-level-008
+{
+	width: 8px;
+	background-color:#24FF00;
+}
+span.activity-level-009
+{
+	width: 9px;
+	background-color:#2AFF00;
+}
+span.activity-level-010
+{
+	width: 10px;
+	background-color:#2FFF00;
+}
+span.activity-level-011
+{
+	width: 11px;
+	background-color:#34FF00;
+}
+span.activity-level-012
+{
+	width: 12px;
+	background-color:#39FF00;
+}
+span.activity-level-013
+{
+	width: 13px;
+	background-color:#3EFF00;
+}
+span.activity-level-014
+{
+	width: 14px;
+	background-color:#44FF00;
+}
+span.activity-level-015
+{
+	width: 15px;
+	background-color:#49FF00;
+}
+span.activity-level-016
+{
+	width: 16px;
+	background-color:#4EFF00;
+}
+span.activity-level-017
+{
+	width: 17px;
+	background-color:#53FF00;
+}
+span.activity-level-018
+{
+	width: 18px;
+	background-color:#58FF00;
+}
+span.activity-level-019
+{
+	width: 19px;
+	background-color:#5EFF00;
+}
+span.activity-level-020
+{
+	width: 20px;
+	background-color:#63FF00;
+}
+span.activity-level-021
+{
+	width: 21px;
+	background-color:#68FF00;
+}
+span.activity-level-022
+{
+	width: 22px;
+	background-color:#6DFF00;
+}
+span.activity-level-023
+{
+	width: 23px;
+	background-color:#72FF00;
+}
+span.activity-level-024
+{
+	width: 24px;
+	background-color:#78FF00;
+}
+span.activity-level-025
+{
+	width: 25px;
+	background-color:#7DFF00;
+}
+span.activity-level-026
+{
+	width: 26px;
+	background-color:#82FF00;
+}
+span.activity-level-027
+{
+	width: 27px;
+	background-color:#87FF00;
+}
+span.activity-level-028
+{
+	width: 28px;
+	background-color:#8DFF00;
+}
+span.activity-level-029
+{
+	width: 29px;
+	background-color:#92FF00;
+}
+span.activity-level-030
+{
+	width: 30px;
+	background-color:#97FF00;
+}
+span.activity-level-031
+{
+	width: 31px;
+	background-color:#9CFF00;
+}
+span.activity-level-032
+{
+	width: 32px;
+	background-color:#A1FF00;
+}
+span.activity-level-033
+{
+	width: 33px;
+	background-color:#A7FF00;
+}
+span.activity-level-034
+{
+	width: 34px;
+	background-color:#ACFF00;
+}
+span.activity-level-035
+{
+	width: 35px;
+	background-color:#B1FF00;
+}
+span.activity-level-036
+{
+	width: 36px;
+	background-color:#B6FF00;
+}
+span.activity-level-037
+{
+	width: 37px;
+	background-color:#BBFF00;
+}
+span.activity-level-038
+{
+	width: 38px;
+	background-color:#C1FF00;
+}
+span.activity-level-039
+{
+	width: 39px;
+	background-color:#C6FF00;
+}
+span.activity-level-040
+{
+	width: 40px;
+	background-color:#CBFF00;
+}
+span.activity-level-041
+{
+	width: 41px;
+	background-color:#D0FF00;
+}
+span.activity-level-042
+{
+	width: 42px;
+	background-color:#D5FF00;
+}
+span.activity-level-043
+{
+	width: 43px;
+	background-color:#DBFF00;
+}
+span.activity-level-044
+{
+	width: 44px;
+	background-color:#E0FF00;
+}
+span.activity-level-045
+{
+	width: 45px;
+	background-color:#E5FF00;
+}
+span.activity-level-046
+{
+	width: 46px;
+	background-color:#EAFF00;
+}
+span.activity-level-047
+{
+	width: 47px;
+	background-color:#EFFF00;
+}
+span.activity-level-048
+{
+	width: 48px;
+	background-color:#F5FF00;
+}
+span.activity-level-049
+{
+	width: 49px;
+	background-color:#FAFF00;
+}
+span.activity-level-050
+{
+	width: 50px;
+	background-color:#FFFF00;
+}
+span.activity-level-051
+{
+	width: 51px;
+	background-color:#FFFA00;
+}
+span.activity-level-052
+{
+	width: 52px;
+	background-color:#FFF500;
+}
+span.activity-level-053
+{
+	width: 53px;
+	background-color:#FFF000;
+}
+span.activity-level-054
+{
+	width: 54px;
+	background-color:#FFEB00;
+}
+span.activity-level-055
+{
+	width: 55px;
+	background-color:#FFE600;
+}
+span.activity-level-056
+{
+	width: 56px;
+	background-color:#FFE000;
+}
+span.activity-level-057
+{
+	width: 57px;
+	background-color:#FFDB00;
+}
+span.activity-level-058
+{
+	width: 58px;
+	background-color:#FFD600;
+}
+span.activity-level-059
+{
+	width: 59px;
+	background-color:#FFD100;
+}
+span.activity-level-060
+{
+	width: 60px;
+	background-color:#FFCC00;
+}
+span.activity-level-061
+{
+	width: 61px;
+	background-color:#FFC700;
+}
+span.activity-level-062
+{
+	width: 62px;
+	background-color:#FFC200;
+}
+span.activity-level-063
+{
+	width: 63px;
+	background-color:#FFBD00;
+}
+span.activity-level-064
+{
+	width: 64px;
+	background-color:#FFB800;
+}
+span.activity-level-065
+{
+	width: 65px;
+	background-color:#FFB300;
+}
+span.activity-level-066
+{
+	width: 66px;
+	background-color:#FFAD00;
+}
+span.activity-level-067
+{
+	width: 67px;
+	background-color:#FFA800;
+}
+span.activity-level-068
+{
+	width: 68px;
+	background-color:#FFA300;
+}
+span.activity-level-069
+{
+	width: 69px;
+	background-color:#FF9E00;
+}
+span.activity-level-070
+{
+	width: 70px;
+	background-color:#FF9900;
+}
+span.activity-level-071
+{
+	width: 71px;
+	background-color:#FF9400;
+}
+span.activity-level-072
+{
+	width: 72px;
+	background-color:#FF8F00;
+}
+span.activity-level-073
+{
+	width: 73px;
+	background-color:#FF8A00;
+}
+span.activity-level-074
+{
+	width: 74px;
+	background-color:#FF8500;
+}
+span.activity-level-075
+{
+	width: 75px;
+	background-color:#FF8000;
+}
+span.activity-level-076
+{
+	width: 76px;
+	background-color:#FF7A00;
+}
+span.activity-level-077
+{
+	width: 77px;
+	background-color:#FF7500;
+}
+span.activity-level-078
+{
+	width: 78px;
+	background-color:#FF7000;
+}
+span.activity-level-079
+{
+	width: 79px;
+	background-color:#FF6B00;
+}
+span.activity-level-080
+{
+	width: 80px;
+	background-color:#FF6600;
+}
+span.activity-level-081
+{
+	width: 81px;
+	background-color:#FF6100;
+}
+span.activity-level-082
+{
+	width: 82px;
+	background-color:#FF5C00;
+}
+span.activity-level-083
+{
+	width: 83px;
+	background-color:#FF5700;
+}
+span.activity-level-084
+{
+	width: 84px;
+	background-color:#FF5200;
+}
+span.activity-level-085
+{
+	width: 85px;
+	background-color:#FF4D00;
+}
+span.activity-level-086
+{
+	width: 86px;
+	background-color:#FF4700;
+}
+span.activity-level-087
+{
+	width: 87px;
+	background-color:#FF4200;
+}
+span.activity-level-088
+{
+	width: 88px;
+	background-color:#FF3D00;
+}
+span.activity-level-089
+{
+	width: 89px;
+	background-color:#FF3800;
+}
+span.activity-level-090
+{
+	width: 90px;
+	background-color:#FF3300;
+}
+span.activity-level-091
+{
+	width: 91px;
+	background-color:#FF2E00;
+}
+span.activity-level-092
+{
+	width: 92px;
+	background-color:#FF2900;
+}
+span.activity-level-093
+{
+	width: 93px;
+	background-color:#FF2400;
+}
+span.activity-level-094
+{
+	width: 94px;
+	background-color:#FF1F00;
+}
+span.activity-level-095
+{
+	width: 95px;
+	background-color:#FF1A00;
+}
+span.activity-level-096
+{
+	width: 96px;
+	background-color:#FF1400;
+}
+span.activity-level-097
+{
+	width: 97px;
+	background-color:#FF0F00;
+}
+span.activity-level-098
+{
+	width: 98px;
+	background-color:#FF0A00;
+}
+span.activity-level-099
+{
+	width: 99px;
+	background-color:#FF0500;
+}
+span.activity-level-100
+{
+	width: 100px;
+	background-color:#FF0000;
+}

@@ -1,0 +1,34 @@
+﻿div.menu-filter-container
+{
+    position: relative;
+}
+
+.mf-blur
+{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+#mf-overlay
+{
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+#mf-overlay-loading
+{
+    background-color: rgba(0, 0, 0, .8); 
+    background-image: url('../Images/fancybox-loading.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 5px;
+    height: 44px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 22em;
+    vertical-align: middle;
+    width: 44px; 
+}
