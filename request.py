@@ -42,8 +42,8 @@ def separate_by_meal_period(html_file):
 	soup = BeautifulSoup(html_file, 'html.parser')
 	dates_and_items = soup.find_all(['h2', 'h3', 'a']) #h2 for date, a for menu items
 	# print(dates_and_items)
-	# for num, item in enumerate(dates_and_items):
-		# print(str(num) + str(item))
+	for num, item in enumerate(dates_and_items):
+		print(str(num) + str(item))
 	breakfast_items = []
 	lunch_items = []
 	brunch_items = []
@@ -54,7 +54,8 @@ def separate_by_meal_period(html_file):
 	index=-1
 	date_time_obj = None
 	for link in dates_and_items:
-		if(link.contents[0].find('for') != -1):
+		if(link.contents[0].find(' for ') != -1):
+		#need spaces, otherwise fails on words like "California"
 			contains_date = link.contents[0]
 			menu_date = contains_date[contains_date.find(',')+2:]
 			date_time_obj = datetime.strptime(menu_date, '%B %d, %Y')
@@ -76,6 +77,7 @@ def export_data():
 	current_day = date.today()
 	current_time = datetime.now().time()
 	output = simple_get(TEST_URL) #get the webpage
+	# print(output)
 	print('Exporting data...')
 	all_items_and_date = separate_by_meal_period(output)
 	all_items = all_items_and_date[0]
