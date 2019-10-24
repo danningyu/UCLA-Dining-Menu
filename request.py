@@ -3,7 +3,8 @@ from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
 from enum import Enum
-from datetime import date, datetime
+# from datetime import date, datetime
+import datetime
 from apscheduler.schedulers.blocking import BlockingScheduler
 import collections
 
@@ -42,8 +43,8 @@ def separate_by_meal_period(html_file):
 	soup = BeautifulSoup(html_file, 'html.parser')
 	dates_and_items = soup.find_all(['h2', 'h3', 'a']) #h2 for date, a for menu items
 	# print(dates_and_items)
-	for num, item in enumerate(dates_and_items):
-		print(str(num) + str(item))
+	# for num, item in enumerate(dates_and_items):
+		# print(str(num) + str(item))
 	breakfast_items = []
 	lunch_items = []
 	brunch_items = []
@@ -51,31 +52,45 @@ def separate_by_meal_period(html_file):
 	food_items = [breakfast_items, brunch_items, lunch_items, dinner_items]
 	dates_and_items = dates_and_items[41:] #eliminate headers
 	dates_and_items = dates_and_items[:-5] #and footers
-	index=-1
+	index=0
 	date_time_obj = None
 	for link in dates_and_items:
+		if(link.contents[0].find("Detailed Menu") != -1 
+			or link.contents[0].find("Nutritive Analysis") != -1):
+			continue;
+		if any('Detailed Breakfast' in s for s in link):
+			print("Starting breakfast")
+			index = 0
+		elif any('Detailed Brunch' in s for s in link):
+			print("Starting brunch")
+			index = 1
+		elif any('Detailed Lunch' in s for s in link):
+			print("Starting lunch")
+			index = 2
+		elif any('Detailed Dinner' in s for s in link):
+			print("Starting dinner")
+			index = 3
+
 		if(link.contents[0].find(' for ') != -1):
+			print("Found a menu time: " + link.contents[0])
 		#need spaces, otherwise fails on words like "California"
 			contains_date = link.contents[0]
 			menu_date = contains_date[contains_date.find(',')+2:]
-			date_time_obj = datetime.strptime(menu_date, '%B %d, %Y')
+			date_time_obj = menu_date
+			# date_time_obj = datetime.datetime.strptime(menu_date, '%B %d, %Y')
 			print('Extracted date: ' + str(date_time_obj))
-		if any('Detailed Breakfast' in s for s in link):
-			index = 0
-		elif any('Detailed Brunch' in s for s in link):
-			index = 1
-		elif any('Detailed Lunch' in s for s in link):
-			index = 2
-		elif any('Detailed Dinner' in s for s in link):
-			index = 3
-		food_items[index].append(link.contents[0]+'\n')
+				
+		if(str(link).find('h3') != -1):
+			food_items[index].append('\n' + link.contents[0] +'\n\n')
+		else:
+			food_items[index].append(link.contents[0]+'\n')
 	return_val = Items_And_Date(food_items, date_time_obj)
 	return return_val
 
 def export_data():
 	print('Running program...')
-	current_day = date.today()
-	current_time = datetime.now().time()
+	current_day = datetime.date.today()
+	current_time = datetime.datetime.now().time()
 	output = simple_get(TEST_URL) #get the webpage
 	# print(output)
 	print('Exporting data...')
@@ -86,8 +101,8 @@ def export_data():
 
 	filename = "menu.txt"
 	file1 = open(filename, "w+")
-	file1.writelines('UCLA Dining menu for ' + str(current_day) + '\n')
-	file1.writelines('Generated on PDT\n\n')
+	file1.writelines('UCLA Dining menu for ' + all_items_and_date[1]+ '\n')
+	file1.writelines('Generated on ' + str(current_day) + ' ' + str(current_time) + ' PDT\n\n')
 	file1.writelines(all_items[0])
 	file1.write('\n\n')
 	file1.writelines(all_items[1])
