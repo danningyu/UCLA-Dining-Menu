@@ -108,13 +108,6 @@ def export_data():
 			file1.writelines(meal_items)
 			file1.write('\n\n')
 
-	#file1.writelines(all_items[0])
-	#file1.write('\n\n')
-	#file1.writelines(all_items[1])
-	#file1.write('\n\n')
-	#file1.writelines(all_items[2])
-	#file1.write('\n\n')
-	#file1.writelines(all_items[3])
 	file1.close()
 	print('Done running program...')
 
