@@ -44,7 +44,7 @@ def separate_by_meal_period(html_file):
 	dates_and_items = soup.find_all(['h2', 'h3', 'a']) #h2 for date, a for menu items
 	# print(dates_and_items)
 	# for num, item in enumerate(dates_and_items):
-		# print(str(num) + str(item))
+	#	print(str(num) + str(item))
 	breakfast_items = []
 	lunch_items = []
 	brunch_items = []
@@ -55,25 +55,26 @@ def separate_by_meal_period(html_file):
 	index=0
 	date_time_obj = None
 	for link in dates_and_items:
-		if(link.contents[0].find("Detailed Menu") != -1 
-			or link.contents[0].find("Nutritive Analysis") != -1):
+		if (link.contents[0].find("Detailed Menu") != -1 
+			or link.contents[0].find("Nutritive Analysis") != -1
+			or link.contents[0].find("Detailed") != -1):
 			continue;
-		if any('Detailed Breakfast' in s for s in link):
+		if any('Breakfast Menu' in s for s in link):
 			# print("Starting breakfast")
 			index = 0
-		elif any('Detailed Brunch' in s for s in link):
+		elif any('Brunch Menu' in s for s in link):
 			# print("Starting brunch")
 			index = 1
-		elif any('Detailed Lunch' in s for s in link):
+		elif any('Lunch Menu' in s for s in link):
 			# print("Starting lunch")
 			index = 2
-		elif any('Detailed Dinner' in s for s in link):
+		elif any('Dinner Menu' in s for s in link):
 			# print("Starting dinner")
 			index = 3
 
 		if(link.contents[0].find(' for ') != -1):
 			# print("Found a menu time: " + link.contents[0])
-		#need spaces, otherwise fails on words like "California"
+			#need spaces, otherwise fails on words like "California"
 			contains_date = link.contents[0]
 			menu_date = contains_date[contains_date.find(',')+2:]
 			date_time_obj = menu_date
@@ -81,7 +82,7 @@ def separate_by_meal_period(html_file):
 			# print('Extracted date: ' + str(date_time_obj))
 				
 		if(str(link).find('h3') != -1):
-			food_items[index].append('\n' + link.contents[0] +'\n')
+			food_items[index].append('\n' + link.contents[0].upper()+'\n')
 		else:
 			food_items[index].append(link.contents[0]+'\n')
 	return_val = Items_And_Date(food_items, date_time_obj)
@@ -96,8 +97,8 @@ def export_data():
 	print('Exporting data...')
 	all_items_and_date = separate_by_meal_period(output)
 	all_items = all_items_and_date[0]
-	for meal_period_items in all_items:
-		meal_period_items.append('\n\r')
+	# for meal_period_items in all_items:
+		# meal_period_items.append('\n')
 
 	filename = "menu.txt"
 	file1 = open(filename, "w+")
@@ -106,7 +107,7 @@ def export_data():
 	for meal_items in all_items:
 		if len(meal_items) != 0:
 			file1.writelines(meal_items)
-			file1.write('\n\n')
+			file1.write('\n')
 
 	file1.close()
 	print('Done running program...')
