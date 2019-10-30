@@ -110,8 +110,7 @@ def export_data():
 			file1.write('\n')
 
 	file1.close()
-	print('Done running program...')
-	tempvar = input("Enter a value")
+	print('Done running program, will run again in 10 minutes...')
 
 #run once upon startup
 export_data()
