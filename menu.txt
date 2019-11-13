@@ -1,49 +1,60 @@
-UCLA Dining menu for November 10, 2019
-Generated on 2019-11-10 14:02:11.056921 PDT
+UCLA Dining menu for November 13, 2019
+Generated on 2019-11-13 00:44:36.800885 PDT
 
-Brunch Menu for Today, November 10, 2019
+Breakfast Menu for Tomorrow, November 13, 2019
 
 COVEL
-Activity Level
-Egg White
-Omelet Bar
 Bacon
-Potatoes O'Brien
+Chicken Apple Sausage
+Egg White
 Scrambled Eggs
-Turkey Links (Breakfast Sausage)
-Spiralini w/ Pesto Cream Sauce
-Margherita Pizza
-Belgian Waffle
 Pancakes
-Tator Tots
-
-Dinner Menu for Today, November 10, 2019
-
-COVEL
-Cheesy Cavatappi Pasta w/ Crispy Prosciutto
-Creamy Cavatappi w/ Fennel
-Italian Fried Chicken
-Manicotti
-Stromboli Florentine
 
 DE NEVE
-Alabama Pecan-Wood Smoked Ham
-Cajun Shrimp & Quinoa Casserole
-Mexican-Style Grilled Steak (Carne Asada) Bowl
-Puerto Rican Mofongo Patty w/ Vegetables, Black Beans & Egg
-Southern Fried Chicken Drumsticks
-Vegetarian Chicken & Dumplings
-Garlic Chicken Pizza
-Brunch Burger
-D.F.C.
+Bacon
+Pork Sausage
+Scrambled Eggs
 
-BRUIN PLATE
-Arabic Chicken Bowl w/ Red Cabbage & Whole Wheat Pita
-Eastern Spiced Tofu w/ Spelt Tabouli
-Sweet Pepper & Steak Salad
-Parmesan Tempeh w/ Baked Purple Potato & Kohlrabi
-Chickpea, Artichoke, & Spinach Hummus Flatbread
-Lamb, Tomato, Onion & Jalapeno Flatbread
-Grilled Pork Tenderloin
-Grilled Mole Tofu
+Lunch Menu for Tomorrow, November 13, 2019
+
+COVEL
+Penne Alfredo
+Penne w/ Marinara
+Beef & Lamb Gyro
+Wild Mushroom Pizza
+
+DE NEVE
+Classic Roasted Chicken
+Seafood Gumbo
+Ziti Bolognese
+Pasta w/ Pesto Cream Sauce
+Fried Chicken
+Spicy Fried Cauliflower
+Italian Sausage Pizza
+
+Dinner Menu for Tomorrow, November 13, 2019
+
+COVEL
+Penne & Meatballs
+Four Cheese Penne
+Chicken Parmesan
+Eggplant Parmesan
+Wild Mushroom Pizza
+
+DE NEVE
+Classic Roasted Chicken
+Seafood Gumbo
+Bayou Chicken Pasta
+Ziti w/ Marinara
+Meatloaf
+Vegetable Pot Pie
+Italian Sausage Pizza
+
+FEAST AT RIEBER
+Tarako Pasta
+Beef Sukiyaki
+Vegan Beef Sukiyaki
+Green Onion Pancake
+Berkshire Kurobuta Pork Hot Dog
+Cassava Root Fries
 
