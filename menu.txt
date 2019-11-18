@@ -1,60 +1,87 @@
-UCLA Dining menu for November 13, 2019
-Generated on 2019-11-13 00:44:36.800885 PDT
+UCLA Dining menu for November 18, 2019
+Generated on 2019-11-18 10:56:20.014650 PDT
 
-Breakfast Menu for Tomorrow, November 13, 2019
-
-COVEL
-Bacon
-Chicken Apple Sausage
-Egg White
-Scrambled Eggs
-Pancakes
-
-DE NEVE
-Bacon
-Pork Sausage
-Scrambled Eggs
-
-Lunch Menu for Tomorrow, November 13, 2019
+Lunch Menu for Today, November 18, 2019
 
 COVEL
-Penne Alfredo
-Penne w/ Marinara
-Beef & Lamb Gyro
-Wild Mushroom Pizza
+Salami, Tomato, & Cheese Sandwich
+Build-Your-Own Pasta Bar
+Cheese Ravioli
+Chicken Tagine w/ Olives & Preserved Lemons
+Roasted Corn Cous Cous Kofta
+Stromboli Florentine
+Crusty Gruyere Grilled Cheese Sandwich w/ Bacon
 
 DE NEVE
-Classic Roasted Chicken
-Seafood Gumbo
-Ziti Bolognese
-Pasta w/ Pesto Cream Sauce
-Fried Chicken
-Spicy Fried Cauliflower
-Italian Sausage Pizza
-
-Dinner Menu for Tomorrow, November 13, 2019
-
-COVEL
-Penne & Meatballs
-Four Cheese Penne
-Chicken Parmesan
-Eggplant Parmesan
-Wild Mushroom Pizza
-
-DE NEVE
-Classic Roasted Chicken
-Seafood Gumbo
-Bayou Chicken Pasta
-Ziti w/ Marinara
-Meatloaf
-Vegetable Pot Pie
-Italian Sausage Pizza
+Fisherman's Stew
+Lemon Garlic Chicken Thighs & Drumsticks
+Tex-Mex Shrimp Fajita		
+Vegan Portobello & Pepper Fajitas
+Turkey Portobello Meatloaf
+Vegetarian BBQ Beef Sandwich
+Flaming Hot Cheetos Pizza
+Spinach, Mushroom, & Blue Cheese Pizza
+BBQ Bacon Cheeseburger
+Buffalo Bleu Chicken Sandwich
 
 FEAST AT RIEBER
-Tarako Pasta
-Beef Sukiyaki
-Vegan Beef Sukiyaki
+House Special Chow Mein
+Pan-Fried Saimin Noodles & Vegetables
+California Roll
+Tofu & Edamame Bowl
+Huo Guo Hot Pot
+Vegetable Hot Pot
+Crispy Fried Tofu in Savory Broth
+Savory Sweet Potato Bake
+Teriyaki Seitan Burger
+
+BRUIN PLATE
+Black Quinoa, BBQ Tofu & Red Bean Bowl
+Golden Chickpeas w/ Rice, Beans & Kale Bowl
+Baja Caesar Salad w/ Chipotle Chicken
+Vegan Baja Caesar Salad
+Southwest Black Bean & Avocado Tortilla Pizza
+Spicy Beef & Eggplant Flatbread
+Beef & Bulgur Slider
+Black Bean & Brown Rice Stacker
+
+Dinner Menu for Today, November 18, 2019
+
+COVEL
+Ravioli w/ Proscuitto & Basil
+Cheese Ravioli w/ Marinara
+Capensis w/ Caramelized Grapes
+Roasted Corn Cous Cous Kofta
+Stromboli Florentine
+Crusty Gruyere Grilled Cheese Sandwich w/ Bacon
+
+DE NEVE
+Fisherman's Stew
+Lemon Garlic Chicken Thighs & Drumsticks
+San Diego Chipotle Chicken
+Santa Monica Vegan Chipotle Chicken
+K Town Pork Ribs
+Stuffed Pepper
+Roasted Vegetable Pizza
+Vegetarian Mexican Pizza
+BBQ Bacon Cheeseburger
+Buffalo Bleu Chicken Sandwich
+
+FEAST AT RIEBER
+Original Kung Pao Chicken
+Caramelized Eggplant
+Grilled Salmon
+Tea Egg & Bokchoy
 Green Onion Pancake
-Berkshire Kurobuta Pork Hot Dog
-Cassava Root Fries
+Naan Bread
+Seared Tuna w/ Seaweed Salad Sandwich
+
+BRUIN PLATE
+Lentil Chard & Sweet Potato Curry
+Whole Wheat Spaghetti w/ Wheatballs & Spinach Bowl
+Moroccan Salmon
+Mushroom & Green Chickpea Risotto
+Pear, Thyme & Blue Cheese Pizza
+Tri-Tip, Arugula & Pecorino Flatbread
+Grilled African Spiced Tofu
 
