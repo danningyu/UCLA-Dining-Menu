@@ -43,8 +43,8 @@ def separate_by_meal_period(html_file):
 	soup = BeautifulSoup(html_file, 'html.parser')
 	dates_and_items = soup.find_all(['h2', 'h3', 'a']) #h2 for date, a for menu items
 	# print(dates_and_items)
-	# for num, item in enumerate(dates_and_items):
-	#	print(str(num) + str(item))
+	for num, item in enumerate(dates_and_items):
+		print(str(num) + str(item))
 	breakfast_items = []
 	lunch_items = []
 	brunch_items = []
@@ -55,36 +55,41 @@ def separate_by_meal_period(html_file):
 	index=0
 	date_time_obj = None
 	for link in dates_and_items:
-		if (link.contents[0].find("Detailed Menu") != -1 
-			or link.contents[0].find("Nutritive Analysis") != -1
-			or link.contents[0].find("Detailed") != -1):
-			continue;
-		if any('Breakfast Menu' in s for s in link):
-			# print("Starting breakfast")
-			index = 0
-		elif any('Brunch Menu' in s for s in link):
-			# print("Starting brunch")
-			index = 1
-		elif any('Lunch Menu' in s for s in link):
-			# print("Starting lunch")
-			index = 2
-		elif any('Dinner Menu' in s for s in link):
-			# print("Starting dinner")
-			index = 3
+		try:			
+			print(link.contents[0])
+			if (link.contents[0].find("Detailed Menu") != -1 
+				or link.contents[0].find("Nutritive Analysis") != -1
+				or link.contents[0].find("Detailed") != -1):
+				continue;
+			if any('Breakfast Menu' in s for s in link):
+				# print("Starting breakfast")
+				index = 0
+			elif any('Brunch Menu' in s for s in link):
+				# print("Starting brunch")
+				index = 1
+			elif any('Lunch Menu' in s for s in link):
+				# print("Starting lunch")
+				index = 2
+			elif any('Dinner Menu' in s for s in link):
+				# print("Starting dinner")
+				index = 3
 
-		if(link.contents[0].find(' for ') != -1):
-			# print("Found a menu time: " + link.contents[0])
-			#need spaces, otherwise fails on words like "California"
-			contains_date = link.contents[0]
-			menu_date = contains_date[contains_date.find(',')+2:]
-			date_time_obj = menu_date
-			# date_time_obj = datetime.datetime.strptime(menu_date, '%B %d, %Y')
-			# print('Extracted date: ' + str(date_time_obj))
-				
-		if(str(link).find('h3') != -1):
-			food_items[index].append('\n' + link.contents[0].upper()+'\n')
-		else:
-			food_items[index].append(link.contents[0]+'\n')
+			if(link.contents[0].find(' for ') != -1):
+				# print("Found a menu time: " + link.contents[0])
+				#need spaces, otherwise fails on words like "California"
+				contains_date = link.contents[0]
+				menu_date = contains_date[contains_date.find(',')+2:]
+				date_time_obj = menu_date
+				# date_time_obj = datetime.datetime.strptime(menu_date, '%B %d, %Y')
+				# print('Extracted date: ' + str(date_time_obj))
+					
+			if(str(link).find('h3') != -1):
+				food_items[index].append('\n' + link.contents[0].upper()+'\n')
+			else:
+				food_items[index].append(link.contents[0]+'\n')
+		except IndexError:
+			print("Empty item")
+			continue;
 	return_val = Items_And_Date(food_items, date_time_obj)
 	return return_val
 
