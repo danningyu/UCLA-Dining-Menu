@@ -43,8 +43,8 @@ def separate_by_meal_period(html_file):
 	soup = BeautifulSoup(html_file, 'html.parser')
 	dates_and_items = soup.find_all(['h2', 'h3', 'a']) #h2 for date, a for menu items
 	# print(dates_and_items)
-	for num, item in enumerate(dates_and_items):
-		print(str(num) + str(item))
+	# for num, item in enumerate(dates_and_items):
+	# 	print(str(num) + str(item))
 	breakfast_items = []
 	lunch_items = []
 	brunch_items = []
