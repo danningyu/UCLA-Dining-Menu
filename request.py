@@ -56,7 +56,7 @@ def separate_by_meal_period(html_file):
 	date_time_obj = None
 	for link in dates_and_items:
 		try:			
-			print(link.contents[0])
+			# print(link.contents[0])
 			if (link.contents[0].find("Detailed Menu") != -1 
 				or link.contents[0].find("Nutritive Analysis") != -1
 				or link.contents[0].find("Detailed") != -1):
