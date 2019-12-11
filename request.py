@@ -122,7 +122,7 @@ export_data()
 
 @sched.scheduled_job('interval', seconds=600)
 def timed_job():
-    print('Executing job on ' + str(datetime.now().time()))
+    print('Executing job on ' + str(datetime.datetime.now().time()))
     export_data()
 
 sched.start()
