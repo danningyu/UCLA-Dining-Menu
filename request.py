@@ -107,7 +107,10 @@ def export_data():
 
 	filename = "menu.txt"
 	file1 = open(filename, "w+")
-	file1.writelines('UCLA Dining menu for ' + all_items_and_date[1]+ '\n')
+	if all_items_and_date[1] is not None:
+		file1.writelines('UCLA Dining menu for ' + all_items_and_date[1]+ '\n')
+	else:
+		file1.write("No menu items found.\n")
 	file1.writelines('Generated on ' + str(current_day) + ' ' + str(current_time) + ' PDT\n\n')
 	for meal_items in all_items:
 		if len(meal_items) != 0:
